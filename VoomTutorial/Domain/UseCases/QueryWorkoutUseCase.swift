@@ -39,10 +39,15 @@ class QueryWorkoutUseCase: UseCase {
     func start() -> Cancellable? {
         do {
             return try workoutRepository.workouts(by: requestValue.bodyPart) { workouts in
-                // 테스트 실행을 위해 빈 배열을 바로 반환하도록 작성
-                let result:[ArrangedWorkout] = [
-                    ArrangedWorkout(muscle: "광배근", workouts: workouts.filter { $0.target?.muscle == "광배근" })
-                ]
+                let muscles: [String] = workouts
+                    .map { $0.target?.muscle }
+                    .filter { $0 != nil }
+                    .map { $0! }
+                let reduced = Array(Set(muscles)).sorted()
+                let result: [ArrangedWorkout] = reduced
+                    .map { muscle in
+                        return ArrangedWorkout(muscle: muscle, workouts: workouts.filter({ $0.target?.muscle == muscle}))
+                    }
                 completion(.success(result))
             }
         } catch {
