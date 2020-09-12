@@ -49,7 +49,7 @@ class QueryWorkoutUseCaseTests: XCTestCase {
         }
     }
     
-    func testQueryWorkoutUsecaseShouldReorderWorkoutByMuscleName() {
+    func testQueryWorkoutUsecaseShouldNotBeEmptyAndGenerateArrangedWorkoutsByMuscleName() {
         // Given
         let expectation = self.expectation(description: "근육별로 운동이 정렬됩니다")
         expectation.expectedFulfillmentCount = 1
