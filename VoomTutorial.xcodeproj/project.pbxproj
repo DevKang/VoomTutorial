@@ -15,6 +15,10 @@
 		4997403D250CA83000618F9B /* WorkoutTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4997403C250CA83000618F9B /* WorkoutTarget.swift */; };
 		4997403F250CDCF800618F9B /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4997403E250CDCF800618F9B /* Workout.swift */; };
 		49974041250CDD2A00618F9B /* Entity+ValueObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49974040250CDD2900618F9B /* Entity+ValueObject.swift */; };
+		49F82CE9250CE78800573FC5 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F82CE8250CE78800573FC5 /* Cancellable.swift */; };
+		49F82CEB250CE7FF00573FC5 /* QueryWorkoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F82CEA250CE7FF00573FC5 /* QueryWorkoutUseCase.swift */; };
+		49F82CEE250CE81200573FC5 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F82CED250CE81200573FC5 /* UseCase.swift */; };
+		49F82CF2250CE98F00573FC5 /* WorkoutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F82CF1250CE98F00573FC5 /* WorkoutRepository.swift */; };
 		73EA2F910F9A8CFB93CA5C87 /* Pods_VoomTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9B432079A66163D299D683 /* Pods_VoomTutorial.framework */; };
 		DB59CE922B001B4846754628 /* Pods_VoomTutorialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33E1C5C87AA74679DC412EC /* Pods_VoomTutorialTests.framework */; };
 		E35A2F2BBBEC6700AE8AA13E /* Pods_VoomTutorial_VoomTutorialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A58F1140EE913CE29EC53F0 /* Pods_VoomTutorial_VoomTutorialUITests.framework */; };
@@ -53,6 +57,10 @@
 		4997403C250CA83000618F9B /* WorkoutTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTarget.swift; sourceTree = "<group>"; };
 		4997403E250CDCF800618F9B /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		49974040250CDD2900618F9B /* Entity+ValueObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+ValueObject.swift"; sourceTree = "<group>"; };
+		49F82CE8250CE78800573FC5 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
+		49F82CEA250CE7FF00573FC5 /* QueryWorkoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkoutUseCase.swift; sourceTree = "<group>"; };
+		49F82CED250CE81200573FC5 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		49F82CF1250CE98F00573FC5 /* WorkoutRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRepository.swift; sourceTree = "<group>"; };
 		6220C2D4569EECFEA668792C /* Pods-VoomTutorial-VoomTutorialUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoomTutorial-VoomTutorialUITests.debug.xcconfig"; path = "Target Support Files/Pods-VoomTutorial-VoomTutorialUITests/Pods-VoomTutorial-VoomTutorialUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7A58F1140EE913CE29EC53F0 /* Pods_VoomTutorial_VoomTutorialUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoomTutorial_VoomTutorialUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33E1C5C87AA74679DC412EC /* Pods_VoomTutorialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoomTutorialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				4997403A250CA80A00618F9B /* Domain */,
+				49F82CE7250CE77700573FC5 /* Common */,
 				4997400A250CA76500618F9B /* AppDelegate.swift */,
 				49974013250CA76700618F9B /* Assets.xcassets */,
 				49974015250CA76700618F9B /* LaunchScreen.storyboard */,
@@ -159,7 +168,9 @@
 		4997403A250CA80A00618F9B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				49F82CE6250CE75D00573FC5 /* UseCases */,
 				4997403B250CA81100618F9B /* Entities */,
+				49F82CEF250CE96C00573FC5 /* Interfaces */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -180,6 +191,47 @@
 				49974040250CDD2900618F9B /* Entity+ValueObject.swift */,
 			);
 			path = protocol;
+			sourceTree = "<group>";
+		};
+		49F82CE6250CE75D00573FC5 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				49F82CEA250CE7FF00573FC5 /* QueryWorkoutUseCase.swift */,
+				49F82CEC250CE80300573FC5 /* protocols */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		49F82CE7250CE77700573FC5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				49F82CE8250CE78800573FC5 /* Cancellable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		49F82CEC250CE80300573FC5 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				49F82CED250CE81200573FC5 /* UseCase.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		49F82CEF250CE96C00573FC5 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				49F82CF0250CE97A00573FC5 /* Repositories */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		49F82CF0250CE97A00573FC5 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				49F82CF1250CE98F00573FC5 /* WorkoutRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		F137114E8A4B411DE4A21F35 /* Frameworks */ = {
@@ -430,9 +482,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F82CE9250CE78800573FC5 /* Cancellable.swift in Sources */,
+				49F82CEE250CE81200573FC5 /* UseCase.swift in Sources */,
 				49974041250CDD2A00618F9B /* Entity+ValueObject.swift in Sources */,
 				4997403D250CA83000618F9B /* WorkoutTarget.swift in Sources */,
 				4997400B250CA76500618F9B /* AppDelegate.swift in Sources */,
+				49F82CF2250CE98F00573FC5 /* WorkoutRepository.swift in Sources */,
+				49F82CEB250CE7FF00573FC5 /* QueryWorkoutUseCase.swift in Sources */,
 				4997403F250CDCF800618F9B /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
