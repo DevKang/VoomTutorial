@@ -49,55 +49,79 @@ class QueryWorkoutUseCaseTests: XCTestCase {
         }
     }
     
-    func testQueryWorkoutUsecaseShouldNotBeEmptyAndGenerateArrangedWorkoutsByMuscleName() {
-        // Given
-        let expectation = self.expectation(description: "근육별로 운동이 정렬됩니다")
-        expectation.expectedFulfillmentCount = 2
-        let repository = WorkoutRepositoryMock()
-        
-        // When
-        let bodyPart = BodyPart.back
-        // 리포지토리에서 받은 Workout의 카운트를 수령한다
-        var countOnRepository = -1
-        let _ = try? repository.workouts(by: bodyPart) { workouts in
-            countOnRepository = workouts.count
-            expectation.fulfill() // 첫번째 fulfill
-        }
-        
+    private func getSuccessfulUseCaseResult(repository: WorkoutRepository, bodyPart: BodyPart) -> [QueryWorkoutUseCase.ArrangedWorkout] {
+        let expectation = self.expectation(description: "UseCase가 성공적으로 데이터를 받아옵니다")
+        expectation.expectedFulfillmentCount = 1
+
         let requestValue = QueryWorkoutUseCase.RequestValue(bodyPart: bodyPart)
         var arragedWorkouts: [QueryWorkoutUseCase.ArrangedWorkout] = []
         let useCase = QueryWorkoutUseCase(
-            requestValue: requestValue,
-            completion: { result in
-                switch result {
-                case .success(let data):
-                    arragedWorkouts = data
-                case .failure:
-                    break
-                }
-                expectation.fulfill() // 두번째 fulfill
-            },
-            workoutRepository: repository)
-        
+           requestValue: requestValue,
+           completion: { result in
+               switch result {
+               case .success(let data):
+                   arragedWorkouts = data
+               case .failure:
+                   break
+               }
+               expectation.fulfill()
+           },
+           workoutRepository: repository)
+
         let _ = useCase.start()
         waitForExpectations(timeout: 5, handler: nil)
         
+        return arragedWorkouts
+    }
+    
+    func testQueryWorkoutUseCaseShouldNotBeEmpty() {
+        // Given
+        let repository = WorkoutRepositoryMock()
+        let bodyPart = BodyPart.back
+        // When
+        let arranged = self.getSuccessfulUseCaseResult(repository: repository, bodyPart: bodyPart)
         // Then
+        XCTAssertTrue(!arranged.isEmpty)
+    }
+    
+    func testQueryWorkoutUseCaseShouldGenerateArrangedWorkoutsByMuscleName() {
+        // Given
+        let repository = WorkoutRepositoryMock()
+        let bodyPart = BodyPart.back
+        // When
+        let arranged = self.getSuccessfulUseCaseResult(repository: repository, bodyPart: bodyPart)
         var result = true
-        arragedWorkouts.forEach { data in
+        arranged.forEach { data in
             data.workouts.forEach { workout in
                 if workout.target?.muscle != data.muscle {
                     result = false
                 }
             }
         }
-        // 1. 빈 배열이 아니라면
-        XCTAssertTrue(!arragedWorkouts.isEmpty)
-        // 2. 한 ArragedWorkout의 workouts에는 같은 타겟들만 존재 해야 한다
+        // Then
         XCTAssertTrue(result)
-        // 3. 레포지토리에서 받은 Workout의 갯수와 UseCase를 통해 받은 ArrangedWorkout의 workouts 갯수의 총합이 같아야 한다
-        // -> 누락되는 Workout이 없어야 한다.
-        let totalCount = arragedWorkouts.reduce(0, { $0 + $1.workouts.count })
-        XCTAssertEqual(totalCount, countOnRepository)
+    }
+    
+    func testQueryWorkoutUseCaseShouldObtainSameCountWithRepository() {
+        // Given
+        let repository = WorkoutRepositoryMock()
+        let bodyPart = BodyPart.back
+        
+        let expectation = self.expectation(description: "리포지토리에서 운동 목록을 받아옵니다.")
+        expectation.expectedFulfillmentCount = 1
+        
+        // 리포지토리에서 받은 Workout의 카운트를 수령한다
+        var countOnRepository = -1
+        let _ = try? repository.workouts(by: bodyPart) { workouts in
+            countOnRepository = workouts.count
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 5, handler: nil)
+        
+        // When
+        let arranged = self.getSuccessfulUseCaseResult(repository: repository, bodyPart: bodyPart)
+        let countOnUseCase = arranged.reduce(0, { $0 + $1.workouts.count })
+        
+        XCTAssertEqual(countOnRepository, countOnUseCase)
     }
 }
