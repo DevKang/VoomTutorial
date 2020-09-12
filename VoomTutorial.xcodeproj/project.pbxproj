@@ -12,6 +12,9 @@
 		49974017250CA76700618F9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49974015250CA76700618F9B /* LaunchScreen.storyboard */; };
 		49974022250CA76700618F9B /* VoomTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49974021250CA76700618F9B /* VoomTutorialTests.swift */; };
 		4997402D250CA76700618F9B /* VoomTutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4997402C250CA76700618F9B /* VoomTutorialUITests.swift */; };
+		4997403D250CA83000618F9B /* WorkoutTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4997403C250CA83000618F9B /* WorkoutTarget.swift */; };
+		4997403F250CDCF800618F9B /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4997403E250CDCF800618F9B /* Workout.swift */; };
+		49974041250CDD2A00618F9B /* Entity+ValueObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49974040250CDD2900618F9B /* Entity+ValueObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		49974028250CA76700618F9B /* VoomTutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoomTutorialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4997402C250CA76700618F9B /* VoomTutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoomTutorialUITests.swift; sourceTree = "<group>"; };
 		4997402E250CA76700618F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4997403C250CA83000618F9B /* WorkoutTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTarget.swift; sourceTree = "<group>"; };
+		4997403E250CDCF800618F9B /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		49974040250CDD2900618F9B /* Entity+ValueObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+ValueObject.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,7 @@
 		49974009250CA76500618F9B /* VoomTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				4997403A250CA80A00618F9B /* Domain */,
 				4997400A250CA76500618F9B /* AppDelegate.swift */,
 				49974013250CA76700618F9B /* Assets.xcassets */,
 				49974015250CA76700618F9B /* LaunchScreen.storyboard */,
@@ -117,6 +124,32 @@
 				4997402E250CA76700618F9B /* Info.plist */,
 			);
 			path = VoomTutorialUITests;
+			sourceTree = "<group>";
+		};
+		4997403A250CA80A00618F9B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4997403B250CA81100618F9B /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4997403B250CA81100618F9B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4997403C250CA83000618F9B /* WorkoutTarget.swift */,
+				4997403E250CDCF800618F9B /* Workout.swift */,
+				49974042250CE03200618F9B /* protocol */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		49974042250CE03200618F9B /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				49974040250CDD2900618F9B /* Entity+ValueObject.swift */,
+			);
+			path = protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,7 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49974041250CDD2A00618F9B /* Entity+ValueObject.swift in Sources */,
+				4997403D250CA83000618F9B /* WorkoutTarget.swift in Sources */,
 				4997400B250CA76500618F9B /* AppDelegate.swift in Sources */,
+				4997403F250CDCF800618F9B /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
