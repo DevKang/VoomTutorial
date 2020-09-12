@@ -37,6 +37,15 @@ class QueryWorkoutUseCase: UseCase {
     }
     
     func start() -> Cancellable? {
-        return nil
+        do {
+            return try workoutRepository.workouts(by: requestValue.bodyPart) { workouts in
+                // 테스트 실행을 위해 빈 배열을 바로 반환하도록 작성
+                let result:[ArrangedWorkout] = []
+                completion(.success(result))
+            }
+        } catch {
+            completion(.failure(error))
+            return nil
+        }
     }
 }

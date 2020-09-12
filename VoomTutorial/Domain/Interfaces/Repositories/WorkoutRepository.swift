@@ -9,4 +9,5 @@
 import Foundation
 
 protocol WorkoutRepository {
+    func workouts(by bodyPart: BodyPart, completion: ([Workout]) -> Void) throws -> Cancellable?
 }
