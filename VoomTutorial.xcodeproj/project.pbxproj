@@ -10,11 +10,11 @@
 		4997400B250CA76500618F9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4997400A250CA76500618F9B /* AppDelegate.swift */; };
 		49974014250CA76700618F9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49974013250CA76700618F9B /* Assets.xcassets */; };
 		49974017250CA76700618F9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49974015250CA76700618F9B /* LaunchScreen.storyboard */; };
-		49974022250CA76700618F9B /* VoomTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49974021250CA76700618F9B /* VoomTutorialTests.swift */; };
 		4997402D250CA76700618F9B /* VoomTutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4997402C250CA76700618F9B /* VoomTutorialUITests.swift */; };
 		4997403D250CA83000618F9B /* WorkoutTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4997403C250CA83000618F9B /* WorkoutTarget.swift */; };
 		4997403F250CDCF800618F9B /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4997403E250CDCF800618F9B /* Workout.swift */; };
 		49974041250CDD2A00618F9B /* Entity+ValueObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49974040250CDD2900618F9B /* Entity+ValueObject.swift */; };
+		49AB4A52250CF13700E4A084 /* QueryWorkoutUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB4A51250CF13700E4A084 /* QueryWorkoutUseCaseTests.swift */; };
 		49F82CE9250CE78800573FC5 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F82CE8250CE78800573FC5 /* Cancellable.swift */; };
 		49F82CEB250CE7FF00573FC5 /* QueryWorkoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F82CEA250CE7FF00573FC5 /* QueryWorkoutUseCase.swift */; };
 		49F82CEE250CE81200573FC5 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F82CED250CE81200573FC5 /* UseCase.swift */; };
@@ -49,7 +49,6 @@
 		49974016250CA76700618F9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49974018250CA76700618F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4997401D250CA76700618F9B /* VoomTutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoomTutorialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		49974021250CA76700618F9B /* VoomTutorialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoomTutorialTests.swift; sourceTree = "<group>"; };
 		49974023250CA76700618F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49974028250CA76700618F9B /* VoomTutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoomTutorialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4997402C250CA76700618F9B /* VoomTutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoomTutorialUITests.swift; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		4997403C250CA83000618F9B /* WorkoutTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTarget.swift; sourceTree = "<group>"; };
 		4997403E250CDCF800618F9B /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		49974040250CDD2900618F9B /* Entity+ValueObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+ValueObject.swift"; sourceTree = "<group>"; };
+		49AB4A51250CF13700E4A084 /* QueryWorkoutUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkoutUseCaseTests.swift; sourceTree = "<group>"; };
 		49F82CE8250CE78800573FC5 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
 		49F82CEA250CE7FF00573FC5 /* QueryWorkoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkoutUseCase.swift; sourceTree = "<group>"; };
 		49F82CED250CE81200573FC5 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		49974020250CA76700618F9B /* VoomTutorialTests */ = {
 			isa = PBXGroup;
 			children = (
-				49974021250CA76700618F9B /* VoomTutorialTests.swift */,
+				49AB4A4F250CF11400E4A084 /* Domain */,
 				49974023250CA76700618F9B /* Info.plist */,
 			);
 			path = VoomTutorialTests;
@@ -191,6 +191,22 @@
 				49974040250CDD2900618F9B /* Entity+ValueObject.swift */,
 			);
 			path = protocol;
+			sourceTree = "<group>";
+		};
+		49AB4A4F250CF11400E4A084 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				49AB4A50250CF11F00E4A084 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		49AB4A50250CF11F00E4A084 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				49AB4A51250CF13700E4A084 /* QueryWorkoutUseCaseTests.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		49F82CE6250CE75D00573FC5 /* UseCases */ = {
@@ -497,7 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49974022250CA76700618F9B /* VoomTutorialTests.swift in Sources */,
+				49AB4A52250CF13700E4A084 /* QueryWorkoutUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
