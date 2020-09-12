@@ -56,7 +56,9 @@ class QueryWorkoutUseCaseTests: XCTestCase {
         let repository = WorkoutRepositoryMock()
         
         // When
-        let bodyPart = BodyPart.chest
+        
+        // 리포지토리에서 받은 Workout의 카운트를 수령한다
+        let bodyPart = BodyPart.back
         let requestValue = QueryWorkoutUseCase.RequestValue(bodyPart: bodyPart)
         var arragedWorkouts: [QueryWorkoutUseCase.ArrangedWorkout] = []
         let useCase = QueryWorkoutUseCase(
@@ -68,7 +70,7 @@ class QueryWorkoutUseCaseTests: XCTestCase {
                 case .failure:
                     break
                 }
-                expectation.fulfill()
+                expectation.fulfill() // 두번째 fulfill
             },
             workoutRepository: repository)
         
@@ -84,8 +86,9 @@ class QueryWorkoutUseCaseTests: XCTestCase {
                 }
             }
         }
-        // 1. 빈 배열이 아니라면 2. 한 ArragedWorkout의 workouts에는 같은 타겟들만 존재 해야 한다
+        // 1. 빈 배열이 아니라면
         XCTAssertTrue(!arragedWorkouts.isEmpty)
+        // 2. 한 ArragedWorkout의 workouts에는 같은 타겟들만 존재 해야 한다
         XCTAssertTrue(result)
     }
 }
