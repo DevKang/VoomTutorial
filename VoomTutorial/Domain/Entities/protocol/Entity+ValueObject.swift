@@ -12,5 +12,4 @@ protocol Entity: Identifiable, Equatable {
     typealias Identifier = String
 }
 
-protocol ValueObject: Equatable {
-}
+protocol ValueObject: Equatable { }

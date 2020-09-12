@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		4997403D250CA83000618F9B /* WorkoutTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4997403C250CA83000618F9B /* WorkoutTarget.swift */; };
 		4997403F250CDCF800618F9B /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4997403E250CDCF800618F9B /* Workout.swift */; };
 		49974041250CDD2A00618F9B /* Entity+ValueObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49974040250CDD2900618F9B /* Entity+ValueObject.swift */; };
+		73EA2F910F9A8CFB93CA5C87 /* Pods_VoomTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9B432079A66163D299D683 /* Pods_VoomTutorial.framework */; };
+		DB59CE922B001B4846754628 /* Pods_VoomTutorialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33E1C5C87AA74679DC412EC /* Pods_VoomTutorialTests.framework */; };
+		E35A2F2BBBEC6700AE8AA13E /* Pods_VoomTutorial_VoomTutorialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A58F1140EE913CE29EC53F0 /* Pods_VoomTutorial_VoomTutorialUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21F8342838B2FAB4ABC1E323 /* Pods-VoomTutorial-VoomTutorialUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoomTutorial-VoomTutorialUITests.release.xcconfig"; path = "Target Support Files/Pods-VoomTutorial-VoomTutorialUITests/Pods-VoomTutorial-VoomTutorialUITests.release.xcconfig"; sourceTree = "<group>"; };
 		49974007250CA76500618F9B /* VoomTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoomTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4997400A250CA76500618F9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49974013250CA76700618F9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 		4997403C250CA83000618F9B /* WorkoutTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTarget.swift; sourceTree = "<group>"; };
 		4997403E250CDCF800618F9B /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		49974040250CDD2900618F9B /* Entity+ValueObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+ValueObject.swift"; sourceTree = "<group>"; };
+		6220C2D4569EECFEA668792C /* Pods-VoomTutorial-VoomTutorialUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoomTutorial-VoomTutorialUITests.debug.xcconfig"; path = "Target Support Files/Pods-VoomTutorial-VoomTutorialUITests/Pods-VoomTutorial-VoomTutorialUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A58F1140EE913CE29EC53F0 /* Pods_VoomTutorial_VoomTutorialUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoomTutorial_VoomTutorialUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C33E1C5C87AA74679DC412EC /* Pods_VoomTutorialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoomTutorialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C78AD48E7C54020E27492AF6 /* Pods-VoomTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoomTutorial.release.xcconfig"; path = "Target Support Files/Pods-VoomTutorial/Pods-VoomTutorial.release.xcconfig"; sourceTree = "<group>"; };
+		DA9B432079A66163D299D683 /* Pods_VoomTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoomTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8BE35C717A11CEF6EA1E5E9 /* Pods-VoomTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoomTutorial.debug.xcconfig"; path = "Target Support Files/Pods-VoomTutorial/Pods-VoomTutorial.debug.xcconfig"; sourceTree = "<group>"; };
+		F462CF87B10CEB158685E243 /* Pods-VoomTutorialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoomTutorialTests.debug.xcconfig"; path = "Target Support Files/Pods-VoomTutorialTests/Pods-VoomTutorialTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FB5463F57B51C649C8E70FBC /* Pods-VoomTutorialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoomTutorialTests.release.xcconfig"; path = "Target Support Files/Pods-VoomTutorialTests/Pods-VoomTutorialTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73EA2F910F9A8CFB93CA5C87 /* Pods_VoomTutorial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB59CE922B001B4846754628 /* Pods_VoomTutorialTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E35A2F2BBBEC6700AE8AA13E /* Pods_VoomTutorial_VoomTutorialUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DA03635C2C7087F6F61287A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8BE35C717A11CEF6EA1E5E9 /* Pods-VoomTutorial.debug.xcconfig */,
+				C78AD48E7C54020E27492AF6 /* Pods-VoomTutorial.release.xcconfig */,
+				6220C2D4569EECFEA668792C /* Pods-VoomTutorial-VoomTutorialUITests.debug.xcconfig */,
+				21F8342838B2FAB4ABC1E323 /* Pods-VoomTutorial-VoomTutorialUITests.release.xcconfig */,
+				F462CF87B10CEB158685E243 /* Pods-VoomTutorialTests.debug.xcconfig */,
+				FB5463F57B51C649C8E70FBC /* Pods-VoomTutorialTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		49973FFE250CA76500618F9B = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +111,8 @@
 				49974020250CA76700618F9B /* VoomTutorialTests */,
 				4997402B250CA76700618F9B /* VoomTutorialUITests */,
 				49974008250CA76500618F9B /* Products */,
+				3DA03635C2C7087F6F61287A /* Pods */,
+				F137114E8A4B411DE4A21F35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +182,16 @@
 			path = protocol;
 			sourceTree = "<group>";
 		};
+		F137114E8A4B411DE4A21F35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA9B432079A66163D299D683 /* Pods_VoomTutorial.framework */,
+				7A58F1140EE913CE29EC53F0 /* Pods_VoomTutorial_VoomTutorialUITests.framework */,
+				C33E1C5C87AA74679DC412EC /* Pods_VoomTutorialTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49974031250CA76700618F9B /* Build configuration list for PBXNativeTarget "VoomTutorial" */;
 			buildPhases = (
+				407BFA82B1A77478BC1C1BD4 /* [CP] Check Pods Manifest.lock */,
 				49974003250CA76500618F9B /* Sources */,
 				49974004250CA76500618F9B /* Frameworks */,
 				49974005250CA76500618F9B /* Resources */,
+				2BD0F8E794ADC02EBE02BD60 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,6 +218,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49974034250CA76700618F9B /* Build configuration list for PBXNativeTarget "VoomTutorialTests" */;
 			buildPhases = (
+				78CD0437CC222EF6DB3A8D41 /* [CP] Check Pods Manifest.lock */,
 				49974019250CA76700618F9B /* Sources */,
 				4997401A250CA76700618F9B /* Frameworks */,
 				4997401B250CA76700618F9B /* Resources */,
@@ -194,9 +237,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49974037250CA76700618F9B /* Build configuration list for PBXNativeTarget "VoomTutorialUITests" */;
 			buildPhases = (
+				50730E779D17DE7CF8410CF8 /* [CP] Check Pods Manifest.lock */,
 				49974024250CA76700618F9B /* Sources */,
 				49974025250CA76700618F9B /* Frameworks */,
 				49974026250CA76700618F9B /* Resources */,
+				D16B8202ADCABEC17FD66BA5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -276,6 +321,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BD0F8E794ADC02EBE02BD60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VoomTutorial/Pods-VoomTutorial-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VoomTutorial/Pods-VoomTutorial-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VoomTutorial/Pods-VoomTutorial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		407BFA82B1A77478BC1C1BD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VoomTutorial-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50730E779D17DE7CF8410CF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VoomTutorial-VoomTutorialUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78CD0437CC222EF6DB3A8D41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VoomTutorialTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D16B8202ADCABEC17FD66BA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VoomTutorial-VoomTutorialUITests/Pods-VoomTutorial-VoomTutorialUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VoomTutorial-VoomTutorialUITests/Pods-VoomTutorial-VoomTutorialUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VoomTutorial-VoomTutorialUITests/Pods-VoomTutorial-VoomTutorialUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		49974003250CA76500618F9B /* Sources */ = {
@@ -448,7 +596,9 @@
 		};
 		49974032250CA76700618F9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8BE35C717A11CEF6EA1E5E9 /* Pods-VoomTutorial.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = VoomTutorial/Info.plist;
@@ -466,7 +616,9 @@
 		};
 		49974033250CA76700618F9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C78AD48E7C54020E27492AF6 /* Pods-VoomTutorial.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = VoomTutorial/Info.plist;
@@ -484,8 +636,9 @@
 		};
 		49974035250CA76700618F9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F462CF87B10CEB158685E243 /* Pods-VoomTutorialTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "${inherited}";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = VoomTutorialTests/Info.plist;
@@ -505,8 +658,9 @@
 		};
 		49974036250CA76700618F9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB5463F57B51C649C8E70FBC /* Pods-VoomTutorialTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "${inherited}";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = VoomTutorialTests/Info.plist;
@@ -526,8 +680,9 @@
 		};
 		49974038250CA76700618F9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6220C2D4569EECFEA668792C /* Pods-VoomTutorial-VoomTutorialUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "${inherited}";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = VoomTutorialUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -545,8 +700,9 @@
 		};
 		49974039250CA76700618F9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21F8342838B2FAB4ABC1E323 /* Pods-VoomTutorial-VoomTutorialUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "${inherited}";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = VoomTutorialUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -17,8 +17,7 @@ enum BodyPart: CaseIterable {
     case core
 }
 
-struct WorkoutTarget: Entity {
-    let id: Identifier
+struct WorkoutTarget: ValueObject {
     let part: BodyPart?
     let muscle: String
 }

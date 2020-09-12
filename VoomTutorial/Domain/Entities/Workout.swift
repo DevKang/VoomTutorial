@@ -18,4 +18,5 @@ struct Workout: Entity {
     let id: Identifier
     let target: WorkoutTarget?
     let category: WorkoutCategory
+    let name: String
 }
