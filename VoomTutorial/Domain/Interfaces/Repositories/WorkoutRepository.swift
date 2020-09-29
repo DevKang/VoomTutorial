@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 // Repository는 Aggregate와 1:1로 매칭 시킵니다.
 // https://www.secmem.org/blog/2020/02/19/ddd-aggregate-pattern/
@@ -14,5 +15,6 @@ import Foundation
 // Voom의 Aggregate은 Numbers참조
 
 protocol WorkoutRepository {
-    func workouts(by bodyPart: BodyPart, completion: ([Workout]) -> Void) throws -> Cancellable?
+    func create(bodyPart:BodyPart, muscle: String, category: WorkoutCategory, name: String) -> Observable<Workout>
+    func workouts(by bodyPart: BodyPart) -> Observable<[Workout]>
 }

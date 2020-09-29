@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		494FBC332522EF0B001ABC65 /* CreateWorkoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494FBC322522EF0B001ABC65 /* CreateWorkoutUseCase.swift */; };
+		494FBC3B2522EFAA001ABC65 /* CreateWorkoutUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494FBC3A2522EFAA001ABC65 /* CreateWorkoutUseCaseTests.swift */; };
+		494FBC4F2522F22C001ABC65 /* WorkoutRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494FBC4E2522F22C001ABC65 /* WorkoutRepositoryMock.swift */; };
 		4997400B250CA76500618F9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4997400A250CA76500618F9B /* AppDelegate.swift */; };
 		49974014250CA76700618F9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49974013250CA76700618F9B /* Assets.xcassets */; };
 		49974017250CA76700618F9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49974015250CA76700618F9B /* LaunchScreen.storyboard */; };
-		4997402D250CA76700618F9B /* VoomTutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4997402C250CA76700618F9B /* VoomTutorialUITests.swift */; };
 		4997403D250CA83000618F9B /* WorkoutTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4997403C250CA83000618F9B /* WorkoutTarget.swift */; };
 		4997403F250CDCF800618F9B /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4997403E250CDCF800618F9B /* Workout.swift */; };
 		49974041250CDD2A00618F9B /* Entity+ValueObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49974040250CDD2900618F9B /* Entity+ValueObject.swift */; };
@@ -43,6 +45,9 @@
 
 /* Begin PBXFileReference section */
 		21F8342838B2FAB4ABC1E323 /* Pods-VoomTutorial-VoomTutorialUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoomTutorial-VoomTutorialUITests.release.xcconfig"; path = "Target Support Files/Pods-VoomTutorial-VoomTutorialUITests/Pods-VoomTutorial-VoomTutorialUITests.release.xcconfig"; sourceTree = "<group>"; };
+		494FBC322522EF0B001ABC65 /* CreateWorkoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkoutUseCase.swift; sourceTree = "<group>"; };
+		494FBC3A2522EFAA001ABC65 /* CreateWorkoutUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkoutUseCaseTests.swift; sourceTree = "<group>"; };
+		494FBC4E2522F22C001ABC65 /* WorkoutRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRepositoryMock.swift; sourceTree = "<group>"; };
 		49974007250CA76500618F9B /* VoomTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoomTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4997400A250CA76500618F9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49974013250CA76700618F9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,7 +56,6 @@
 		4997401D250CA76700618F9B /* VoomTutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoomTutorialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49974023250CA76700618F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49974028250CA76700618F9B /* VoomTutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoomTutorialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4997402C250CA76700618F9B /* VoomTutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoomTutorialUITests.swift; sourceTree = "<group>"; };
 		4997402E250CA76700618F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4997403C250CA83000618F9B /* WorkoutTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTarget.swift; sourceTree = "<group>"; };
 		4997403E250CDCF800618F9B /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
@@ -112,6 +116,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		494FBC4D2522F208001ABC65 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				494FBC4E2522F22C001ABC65 /* WorkoutRepositoryMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		49973FFE250CA76500618F9B = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +162,7 @@
 		49974020250CA76700618F9B /* VoomTutorialTests */ = {
 			isa = PBXGroup;
 			children = (
+				494FBC4D2522F208001ABC65 /* Mocks */,
 				49AB4A4F250CF11400E4A084 /* Domain */,
 				49974023250CA76700618F9B /* Info.plist */,
 			);
@@ -159,7 +172,6 @@
 		4997402B250CA76700618F9B /* VoomTutorialUITests */ = {
 			isa = PBXGroup;
 			children = (
-				4997402C250CA76700618F9B /* VoomTutorialUITests.swift */,
 				4997402E250CA76700618F9B /* Info.plist */,
 			);
 			path = VoomTutorialUITests;
@@ -205,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				49AB4A51250CF13700E4A084 /* QueryWorkoutUseCaseTests.swift */,
+				494FBC3A2522EFAA001ABC65 /* CreateWorkoutUseCaseTests.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -213,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				49F82CEA250CE7FF00573FC5 /* QueryWorkoutUseCase.swift */,
+				494FBC322522EF0B001ABC65 /* CreateWorkoutUseCase.swift */,
 				49F82CEC250CE80300573FC5 /* protocols */,
 			);
 			path = UseCases;
@@ -290,6 +304,7 @@
 				49974019250CA76700618F9B /* Sources */,
 				4997401A250CA76700618F9B /* Frameworks */,
 				4997401B250CA76700618F9B /* Resources */,
+				0386ADC22EFCD6FDBF760D86 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -391,6 +406,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0386ADC22EFCD6FDBF760D86 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VoomTutorialTests/Pods-VoomTutorialTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VoomTutorialTests/Pods-VoomTutorialTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VoomTutorialTests/Pods-VoomTutorialTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2BD0F8E794ADC02EBE02BD60 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -501,6 +533,7 @@
 				49F82CE9250CE78800573FC5 /* Cancellable.swift in Sources */,
 				49F82CEE250CE81200573FC5 /* UseCase.swift in Sources */,
 				49974041250CDD2A00618F9B /* Entity+ValueObject.swift in Sources */,
+				494FBC332522EF0B001ABC65 /* CreateWorkoutUseCase.swift in Sources */,
 				4997403D250CA83000618F9B /* WorkoutTarget.swift in Sources */,
 				4997400B250CA76500618F9B /* AppDelegate.swift in Sources */,
 				49F82CF2250CE98F00573FC5 /* WorkoutRepository.swift in Sources */,
@@ -513,7 +546,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				494FBC4F2522F22C001ABC65 /* WorkoutRepositoryMock.swift in Sources */,
 				49AB4A52250CF13700E4A084 /* QueryWorkoutUseCaseTests.swift in Sources */,
+				494FBC3B2522EFAA001ABC65 /* CreateWorkoutUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,7 +556,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4997402D250CA76700618F9B /* VoomTutorialUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

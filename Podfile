@@ -12,10 +12,14 @@ target 'VoomTutorial' do
   target 'VoomTutorialTests' do
     inherit! :search_paths
     # Pods for testing
+    pod "Quick"
+    pod "Nimble"
   end
 
   target 'VoomTutorialUITests' do
     # Pods for testing
+    pod "Quick"
+    pod "Nimble"
   end
 
 end

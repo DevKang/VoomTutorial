@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol UseCase {
-    func start() -> Cancellable?
+    associatedtype ResultValue
+    func start() -> Observable<ResultValue>
 }

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import RxSwift
 
 // 운동 타겟의 부위를 입력하면 근육별로 정렬된 운동의 리스트를 불러올 수 있어야 한다
 class QueryWorkoutUseCase: UseCase {
@@ -25,20 +25,18 @@ class QueryWorkoutUseCase: UseCase {
     typealias ResultValue = (Result<[ArrangedWorkout], Error>)
 
     private let requestValue: RequestValue
-    private let completion: (ResultValue) -> Void
     private let workoutRepository: WorkoutRepository
     
     init(requestValue: RequestValue,
-         completion: @escaping (ResultValue) -> Void,
          workoutRepository: WorkoutRepository) {
         self.requestValue = requestValue
-        self.completion = completion
         self.workoutRepository = workoutRepository
     }
     
-    func start() -> Cancellable? {
-        do {
-            return try workoutRepository.workouts(by: requestValue.bodyPart) { workouts in
+    func start() -> Observable<ResultValue> {
+        return workoutRepository
+            .workouts(by: requestValue.bodyPart)
+            .map { workouts in
                 let muscles: [String] = workouts
                     .map { $0.target?.muscle }
                     .filter { $0 != nil }
@@ -48,11 +46,7 @@ class QueryWorkoutUseCase: UseCase {
                     .map { muscle in
                         return ArrangedWorkout(muscle: muscle, workouts: workouts.filter({ $0.target?.muscle == muscle}))
                     }
-                completion(.success(result))
+                return .success(result)
             }
-        } catch {
-            completion(.failure(error))
-            return nil
-        }
     }
 }
